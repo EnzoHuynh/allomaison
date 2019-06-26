@@ -1,0 +1,22 @@
+GET http://localhost:3000/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ1c2VyIiwiaWF0IjoxNTU4MDgyNzY3LCJleHAiOjE1NTgwODYzNjd9.Lss8Puk8LupShj5fWWe7xYE1O5HCSRlhOs0LpUdBhCc
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "firstName": "Kevin",
+  "lastName": "Taing",
+  "email": "taingkn@gmail.com",
+  "password": "kedabi",
+  "newsletterAccepted": true
+}
+
+###
+POST http://localhost:3000/login_check
+Content-Type: application/json
+
+{
+  "email": "taingkn@gmail.com",
+  "password": "kedabi"
+}
