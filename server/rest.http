@@ -1,15 +1,15 @@
-GET http://localhost:3000/movies
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ1c2VyIiwiaWF0IjoxNTU4MDgyNzY3LCJleHAiOjE1NTgwODYzNjd9.Lss8Puk8LupShj5fWWe7xYE1O5HCSRlhOs0LpUdBhCc
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLZXZpbiIsImlhdCI6MTU2MzI4OTQ3OCwiZXhwIjoxNTYzMjkzMDc4fQ.ILkUzhw82KHCg572yDZBAaR192fCERhqgsG9opfy-Yo
 ###
 POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-  "firstName": "Kevin",
-  "lastName": "Taing",
-  "email": "taingkn@gmail.com",
-  "password": "kedabi",
-  "newsletterAccepted": true
+  "firstName": "Amandine",
+  "lastName": "Ripoll",
+  "email": "amandine-ripoll@outlook.fr",
+  "password": "amandine",
+  "dob": "2018-05-12"
 }
 
 ###
@@ -19,4 +19,24 @@ Content-Type: application/json
 {
   "email": "taingkn@gmail.com",
   "password": "kedabi"
+}
+
+###
+POST http://localhost:3000/goods
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLZXZpbiIsImlhdCI6MTU2MzI4OTQ3OCwiZXhwIjoxNTYzMjkzMDc4fQ.ILkUzhw82KHCg572yDZBAaR192fCERhqgsG9opfy-Yo
+
+{
+  "address": "4 bis rue Leon Blum",
+  "zipcode": "91300",
+  "city": "massy",
+  "price": "200000",
+  "description": "Superbe appartement lumineux dans le nouveau quartier de Massy",
+  "title": "Appartement 4 pièce à Massy",
+  "room":4,
+  "bedroom": 3,
+  "square_meters":85,
+  "status":1,
+  "type":"Buy",
+  "id_user":"1"
 }
