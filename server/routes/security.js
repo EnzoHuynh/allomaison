@@ -9,14 +9,14 @@ router.post('/register', (req, res) => {
     lastName,
     email,
     password,
-    newsletterAccepted
+    dob
   } = req.body;
   const user = new User({
     firstName,
     lastName,
     email,
     password,
-    newsletterAccepted
+    dob
   });
 
   user.register()
