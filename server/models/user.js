@@ -15,19 +15,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  newsletterAccepted: {
-    type: Boolean,
+  dob: {
+    type: String,
     required: true,
   },
-  newsletterAcceptedDate: {
-    type: Date,
-    required: true,
-  },
-});
-
-UserSchema.pre('validate', function (next) {
-  if (this.newsletterAccepted) this.newsletterAcceptedDate = Date.now();
-  next();
 });
 
 UserSchema.pre("save", function (next) {
