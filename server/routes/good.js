@@ -19,4 +19,10 @@ router.post('/', (req, res) => {
     });
 })
 
+router.delete('/delete/:id', (req, res) => {
+  Good.remove({ _id: req.params.id }, error => {
+    !err ? res.status(200).json('Resource deleted successfully') : res.status(500).json(error.errors);
+  });
+})
+
 module.exports = router;
