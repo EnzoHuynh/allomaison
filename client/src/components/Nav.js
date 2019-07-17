@@ -24,10 +24,10 @@ const Nav = () => (
       <div className="navbar-item">
         <div className="buttons">
           <Link to="/signUp" className="button is-primary">
-            Sign up
+            Inscription
           </Link>
           <Link to="/signIn" className="button is-light">
-            Sign in
+            Connexion
           </Link>
         </div>
       </div>
