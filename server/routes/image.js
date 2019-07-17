@@ -1,14 +1,14 @@
 const express = require('express');
-const Movie = require('../models/movie');
+const Image = require('../models/image');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  Movie.find(req.query).then(data => res.json(data));
+    Image.find(req.query).then(data => res.json(data));
 })
 
 router.post('/', (req, res) => {
-  const movie = new Movie(req.body);
-  movie.save()
+  const image = new Image(req.body);
+  image.save()
     .then(data => res.status(201).json(data))
     .catch(error => {
       if (error.name === 'ValidationError') {

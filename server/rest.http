@@ -17,8 +17,8 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "email": "taingkn@gmail.com",
-  "password": "kedabi"
+  "email": "amandine-ripoll@outlook.fr",
+  "password": "amandine"
 }
 
 ###
@@ -40,3 +40,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLZ
   "type":"Buy",
   "id_user":"1"
 }
+
+###
+POST http://localhost:3000/images
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1Mzc1NSwiZXhwIjoxNTYzMzU3MzU1fQ.bzFu6CuDOL6WdGi8B9OyFVAkNEekZratMxN8Zyo2PTQ
+
+{
+  "path": "ddfsdfrhdfdgd.png",
+  "id_good": "1"
+}
+
