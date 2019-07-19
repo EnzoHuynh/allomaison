@@ -5,7 +5,9 @@ const securityRouter = require('./routes/security');
 const goodRouter = require('./routes/good');
 const imageRouter = require('./routes/image');
 const bodyparser = require('body-parser');
+const cors = require('cors');
 
+app.use(cors());
 app.use(bodyparser.json());
 app.use(verifyToken);
 app.use('/', securityRouter);
