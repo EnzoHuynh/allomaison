@@ -1,6 +1,7 @@
 const db = require('../lib/db');
 const mongoose = require('mongoose');
 
+
 const ImageSchema = new mongoose.Schema({
   path: {
     type: String,

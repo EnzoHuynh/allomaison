@@ -7,11 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import Provider from './components/Provider';
 import Nav from './components/Nav';
 import Home from './pages/home';
+import UploadImage from './components/UploadImage';
 
 const AppRouter = () => (
   <Router>
     <Nav />
     <Route path="/" exact component={Home} />
+    <Route path="/upload" exact component={UploadImage} />
   </Router>
 );
 
