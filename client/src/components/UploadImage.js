@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import * as multer from 'multer';
 //import { Label, Control, Input, Button, Columns, Column, Title } from 'bulma';
 import 'bulma';
+import upload from '../utils/image';
 
 const UploadImage = () => {
   const [path, setPath] = useState('');
@@ -11,7 +11,12 @@ const UploadImage = () => {
       <form method="POST" enctype="multipart/form-data">
         <div class="file has-name">
           <label class="file-label">
-            <input class="file-input" type="file" name="resume" />
+            <input
+              class="file-input"
+              type="file"
+              name="resume"
+              onChange={e => upload.upload(e, 'multer')}
+            />
             <span class="file-cta">
               <span class="file-icon">
                 <i class="fas fa-upload"></i>
@@ -22,7 +27,7 @@ const UploadImage = () => {
               Screen Shot 2017-07-29 at 15.54.25.png
             </span>
           </label>
-          <button class="button is-primary">Upload'</button>
+          <button class="button is-primary">Upload</button>
         </div>
       </form>
     </>

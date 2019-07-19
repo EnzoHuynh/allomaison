@@ -36,9 +36,10 @@ const upload = multer({
   fileFilter: fileFilter
 })
 
-router.route("/upload")
+router.route('/upload')
   .post(upload.single('path'), (req, res) => {
   const image = new Image({path: req.file.path});
+  console.log(req.file.path);
   image.save()
     .then(data => res.status(201).json(data))
     .catch(error => {
