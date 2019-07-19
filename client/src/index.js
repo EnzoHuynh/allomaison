@@ -7,15 +7,17 @@ import * as serviceWorker from './serviceWorker';
 import Provider from './components/Provider';
 import Nav from './components/Nav';
 import Home from './pages/home';
-import signUp from './pages/signUp';
-import signIn from './pages/signIn';
+import SignUp from './pages/signUp';
+import SignIn from './pages/signIn';
+import Buy from './pages/buy';
 
 const AppRouter = () => (
   <Router>
     <Nav />
     <Route path="/" exact component={Home} />
-    <Route path="/signUp" exact component={signUp} />
-    <Route path="/signIn" exact component={signIn} />
+    <Route path="/signUp" component={SignUp} />
+    <Route path="/signIn" component={SignIn} />
+    <Route path="/acheter/:terms" component={Buy} />
   </Router>
 );
 
