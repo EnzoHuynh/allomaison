@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
 
 import authApi from '../utils/authApi';
 
-const SignIn = ({ history }) => {
+const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -11,7 +10,7 @@ const SignIn = ({ history }) => {
     e.preventDefault();
     authApi.login({ email, password }).then(({ data }) => {
       localStorage.setItem('jwt', data.token);
-      history.push('/');
+      window.location.href = '/';
     });
   };
 
@@ -65,4 +64,4 @@ const SignIn = ({ history }) => {
   );
 };
 
-export default withRouter(SignIn);
+export default SignIn;

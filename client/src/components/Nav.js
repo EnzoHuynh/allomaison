@@ -23,12 +23,29 @@ const Nav = () => (
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <Link to="/signUp" className="button is-primary">
-            Inscription
-          </Link>
-          <Link to="/signIn" className="button is-light">
-            Connexion
-          </Link>
+          {!localStorage.getItem('jwt') ? (
+            <>
+              <Link to="/signUp" className="button is-primary">
+                Inscription
+              </Link>
+              <Link to="/signIn" className="button is-light">
+                Connexion
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/logout"
+                className="button is-danger"
+                onClick={() => {
+                  localStorage.removeItem('jwt');
+                  window.location.href = '/';
+                }}
+              >
+                Deconnexion
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>
