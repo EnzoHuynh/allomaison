@@ -52,17 +52,17 @@ router.route('/upload')
 })
 
 router.delete('/delete/:id', (req, res) => {
-    Image.remove({_id: req.params.id}, err => {
-        !err ? res.status(200).json('Resource deleted successfully') : res.status(500).json(error.errors);
+    Image.remove({_id: req.params.id}, error => {
+        !error ? res.status(200).json('Resource deleted successfully') : res.status(500).json(error.errors);
       });
 })
 
 router.put('/edit/:id', (req, res) => {
     Image.findById(req.params.id).then(image => {
       const { path } = req.body;
-  
+
       image.path = path || image.path;
-  
+
       image.save(error => !error ? res.status(200).json(image) : res.status(500).json(error.errors));
     });
   })

@@ -22,9 +22,33 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3000/goods
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODY0NCwiZXhwIjoxNTYzMzYyMjQ0fQ.64hl9zkpQwnYT9rKwlzxiMHU9D3JpDMXRHLArNwm0T0
+
+###
+PUT http://localhost:3000/goods/edit/5d2ef9ed4ae6a70168b20522
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODY0NCwiZXhwIjoxNTYzMzYyMjQ0fQ.64hl9zkpQwnYT9rKwlzxiMHU9D3JpDMXRHLArNwm0T0
+
+{
+  "address": null,
+  "zipcode": 93150,
+  "city": null,
+  "price": null,
+  "description": null,
+  "title": null,
+  "room": null,
+  "bedroom": null,
+  "square_meters": null,
+  "status": null,
+  "type": null
+}
+
+###
 POST http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLZXZpbiIsImlhdCI6MTU2MzI4OTQ3OCwiZXhwIjoxNTYzMjkzMDc4fQ.ILkUzhw82KHCg572yDZBAaR192fCERhqgsG9opfy-Yo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODU5MSwiZXhwIjoxNTYzMzYyMTkxfQ.cury3g1tzFzVLikIjCgLa2sqC8UNDqurwbLcgC92jeM
 
 {
   "address": "4 bis rue Leon Blum",
@@ -42,6 +66,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLZ
 }
 
 ###
+DELETE http://localhost:3000/goods/delete/5d2ef8888daf7e014eafd8e7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODY0NCwiZXhwIjoxNTYzMzYyMjQ0fQ.64hl9zkpQwnYT9rKwlzxiMHU9D3JpDMXRHLArNwm0T0
+
+###
 POST http://localhost:3000/images
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1Mzc1NSwiZXhwIjoxNTYzMzU3MzU1fQ.bzFu6CuDOL6WdGi8B9OyFVAkNEekZratMxN8Zyo2PTQ
@@ -50,4 +78,3 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
   "path": "ddfsdfrhdfdgd.png",
   "id_good": "1"
 }
-
