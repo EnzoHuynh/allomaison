@@ -1,24 +1,45 @@
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJLZXZpbiIsImlhdCI6MTU2MzI4OTQ3OCwiZXhwIjoxNTYzMjkzMDc4fQ.ILkUzhw82KHCg572yDZBAaR192fCERhqgsG9opfy-Yo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
+
 ###
 POST http://localhost:3000/register
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
 
 {
-  "firstName": "Amandine",
-  "lastName": "Ripoll",
-  "email": "amandine-ripoll@outlook.fr",
-  "password": "amandine",
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@gmail.com",
+  "password": "test",
   "dob": "2018-05-12"
 }
+
+###
+PUT http://localhost:3000/users/edit/5d3190c4a0ed2b001ed9335b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+
+{
+  "firstName": "Enzo",
+  "lastName": "Huynh",
+  "email": "enzo@gmail.com",
+  "password": "enzo",
+  "dob": "2018-05-12"
+}
+
+###
+DELETE http://localhost:3000/users/delete/5d318b859bc632002039b1ab
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+
 
 ###
 POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "email": "amandine-ripoll@outlook.fr",
-  "password": "amandine"
+  "email": "enzo@gmail.com",
+  "password": "enzo"
 }
 
 ###
@@ -50,6 +71,12 @@ POST http://localhost:3000/goods
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODU5MSwiZXhwIjoxNTYzMzYyMTkxfQ.cury3g1tzFzVLikIjCgLa2sqC8UNDqurwbLcgC92jeM
 
+###
+
+POST http://localhost:3000/goods
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+
 {
   "address": "4 bis rue Leon Blum",
   "zipcode": "91300",
@@ -66,8 +93,24 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 }
 
 ###
-DELETE http://localhost:3000/goods/delete/5d2ef8888daf7e014eafd8e7
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODY0NCwiZXhwIjoxNTYzMzYyMjQ0fQ.64hl9zkpQwnYT9rKwlzxiMHU9D3JpDMXRHLArNwm0T0
+PUT http://localhost:3000/goods/edit/5d318d959bc632002039b1ae
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+
+{
+  "address": "4 bis rue Leon Blum",
+  "zipcode": "91300",
+  "city": "paris",
+  "price": "200000",
+  "description": "Superbe appartement lumineux dans le nouveau quartier de Massy",
+  "title": "Appartement 4 pièce à Massy",
+  "room":4,
+  "bedroom": 3,
+  "square_meters":85,
+  "status":1,
+  "type":"Buy",
+  "id_user":"1"
+}
 
 ###
 POST http://localhost:3000/images
