@@ -8,12 +8,16 @@ import Provider from './components/Provider';
 import Nav from './components/Nav';
 import Home from './pages/home';
 import UploadImage from './components/UploadImage';
+import signUp from './pages/signUp';
+import signIn from './pages/signIn';
 
 const AppRouter = () => (
   <Router>
     <Nav />
     <Route path="/" exact component={Home} />
     <Route path="/upload" exact component={UploadImage} />
+    <Route path="/signUp" exact component={signUp} />
+    <Route path="/signIn" exact component={signIn} />
   </Router>
 );
 
