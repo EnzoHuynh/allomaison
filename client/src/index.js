@@ -11,6 +11,7 @@ import SignUp from './pages/signUp';
 import SignIn from './pages/signIn';
 import Profile from './pages/profile';
 import Goods from './pages/goods';
+import Buy from './pages/buy';
 import UploadImage from './components/UploadImage';
 
 const AppRouter = () => (
@@ -22,6 +23,7 @@ const AppRouter = () => (
     <Route path="/signIn" component={SignIn} />
     <Route path="/acheter/:terms?" component={Goods} />
     <Route path="/louer/:terms?" component={Goods} />
+    <Route path="/acheter/:terms" component={Buy} />
     <Route path="/upload" exact component={UploadImage} />
   </Router>
 );
