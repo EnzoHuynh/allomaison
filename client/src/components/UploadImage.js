@@ -14,6 +14,7 @@ const UploadImage = () => {
       .upload({ path, id_good })
       .then(result => {
         console.log('>> (onSubmit) file upload result = ', result);
+        console.log('jwt = ' + localStorage.getItem('jwt'));
         // access results...
       })
       .catch(function(error) {
@@ -57,8 +58,6 @@ const UploadImage = () => {
       </form>
     </>
   );
-
-  console.log(path);
 };
 
 export default UploadImage;

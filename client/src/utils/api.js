@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 let options = {
   baseURL: 'http://localhost:3000/',
   responseType: 'json',
@@ -8,7 +7,7 @@ let options = {
 if (localStorage.getItem('jwt')) {
   options = {
     ...options,
-    headers: { Authorization: localStorage.getItem('jwt') },
+    headers: { Authorization: `Bearer ${localStorage.getItem('jwt')}` },
   };
 }
 

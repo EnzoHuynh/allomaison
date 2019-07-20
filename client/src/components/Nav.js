@@ -34,6 +34,9 @@ const Nav = () => (
             </>
           ) : (
             <>
+              <Link to="/upload" className="button is-primary">
+                Upload
+              </Link>
               <Link
                 to="/logout"
                 className="button is-danger"
