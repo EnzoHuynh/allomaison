@@ -36,6 +36,8 @@ const Nav = () => (
             <>
               <Link to="/profile" className="button is-primary">
                 Profile
+              <Link to="/upload" className="button is-primary">
+                Upload
               </Link>
               <Link to="/upload" className="button is-primary">
                 Upload
