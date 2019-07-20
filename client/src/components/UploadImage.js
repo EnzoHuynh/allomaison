@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import 'bulma';
 import imageApi from '../utils/imageApi';
-=======
-//import { Label, Control, Input, Button, Columns, Column, Title } from 'bulma';
-import 'bulma';
-import upload from '../utils/image';
->>>>>>> commit uploed
 
 const UploadImage = () => {
   const [path, setPath] = useState('');
