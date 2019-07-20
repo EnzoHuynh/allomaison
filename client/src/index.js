@@ -10,6 +10,7 @@ import Home from './pages/home';
 import SignUp from './pages/signUp';
 import SignIn from './pages/signIn';
 import Buy from './pages/buy';
+import UploadImage from './components/UploadImage';
 
 const AppRouter = () => (
   <Router>
@@ -18,6 +19,7 @@ const AppRouter = () => (
     <Route path="/signUp" component={SignUp} />
     <Route path="/signIn" component={SignIn} />
     <Route path="/acheter/:terms" component={Buy} />
+    <Route path="/upload" exact component={UploadImage} />
   </Router>
 );
 
