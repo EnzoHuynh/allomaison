@@ -3,7 +3,7 @@ import axios from './api';
 const upload = async (body = {}) => {
   console.log(body);
   try {
-    const data = await axios.post(`upload`, body);
+    const data = await axios.post(`images/upload`, body);
     console.log('👉 Returned data:', data);
     return data;
   } catch (e) {
@@ -11,8 +11,8 @@ const upload = async (body = {}) => {
   }
 };
 
-const imagesApi = {
+const imageApi = {
   upload,
 };
 
-export default imagesApi;
+export default imageApi;

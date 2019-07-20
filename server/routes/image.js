@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './uploads');
+    cb(null, '../uploads');
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname);
@@ -34,13 +34,12 @@ const upload = multer({
     fileSize: 1024 * 1024 * 5
   },
   fileFilter: fileFilter
-})
+}).array('goodPictures', 10);
 
-router.route('/upload')
-  .post(upload.single('path'), (req, res) => {
-  const image = new Image({path: req.file.path});
-  console.log(req.file.path);
-  image.save()
+router.post('/upload',function(req,res){
+  upload(req,res, (err) => {
+    const image = new Image({path: req.file.path});
+    image.save()
     .then(data => res.status(201).json(data))
     .catch(error => {
       if (error.name === 'ValidationError') {
@@ -49,7 +48,15 @@ router.route('/upload')
         res.sendStatus(500);
       }
     });
-})
+      //console.log(req.body);
+      //console.log(req.files);
+      if(err) {
+          return res.end("Error uploading file.");
+      }
+      res.end("File is uploaded");
+  });
+});
+
 
 router.delete('/delete/:id', (req, res) => {
     Image.remove({_id: req.params.id}, error => {
