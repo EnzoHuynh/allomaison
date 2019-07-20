@@ -57,8 +57,6 @@ const UploadImage = () => {
       </form>
     </>
   );
-
-  console.log(path);
 };
 
 export default UploadImage;
