@@ -14,9 +14,6 @@ import Buy from './pages/buy';
 import UploadImage from './components/UploadImage';
 import NewGood from './pages/newGood';
 import Goods from './pages/goods';
-import Buy from './pages/buy';
-import UploadImage from './components/UploadImage';
-import NewGood from './pages/newGood';
 
 const AppRouter = () => (
   <Router>

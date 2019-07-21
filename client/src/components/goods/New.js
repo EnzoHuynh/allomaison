@@ -17,8 +17,6 @@ const NewGood = () => {
   const [id_user, setIDUser] = useState(user.id);
   const [type, setType] = useState('vendre');
 
-
-
   const onSubmit = e => {
     e.preventDefault();
     goodApi.post({
