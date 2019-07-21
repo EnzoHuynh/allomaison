@@ -1,7 +1,6 @@
 import axios from './api';
 
 const upload = async (body = {}) => {
-  console.log(body);
   try {
     const data = await axios.post(`images/upload`, body);
     console.log('👉 Returned data:', data);

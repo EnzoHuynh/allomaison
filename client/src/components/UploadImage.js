@@ -16,6 +16,7 @@ const UploadImage = () => {
       .then(result => {
         console.log('>> (onSubmit) file upload result = ', result);
         console.log(path);
+
         // access results...
       })
       .catch(function(error) {
@@ -27,7 +28,7 @@ const UploadImage = () => {
   };
 
   const onChange = e => {
-    setPath({ file: e.target.files[0] });
+    setPath(e.target.files[0]);
     setIDGood(1);
   };
 
