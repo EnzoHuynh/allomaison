@@ -11,6 +11,7 @@ import signUp from './pages/signUp';
 import signIn from './pages/signIn';
 import Profile from './pages/profile';
 import Buy from './pages/buy';
+import UploadImage from './components/UploadImage';
 
 import UploadImage from './components/UploadImage';
 
