@@ -38,6 +38,18 @@ const upload = multer({
 
 router.post('/upload',function(req,res){
   upload(req,res, (err) => {
+    /*const image = new Image(req.body);
+    image.save()
+    .then(data => res.status(201).json(data))
+    .catch(error => {
+      if (error.name === 'ValidationError') {
+        res.status(400).json(error.errors);
+      } else {
+        res.sendStatus(500);
+      }
+    });*/
+      //console.log(req.body);
+      //console.log(req.files);
       if(err) {
           return res.end("Error uploading file.");
       }
