@@ -11,7 +11,7 @@ import SignUp from './pages/signUp';
 import SignIn from './pages/signIn';
 import Buy from './pages/buy';
 import UploadImage from './components/UploadImage';
-import NewGood from './components/goods/New';
+import NewGood from './pages/newGood';
 
 const AppRouter = () => (
   <Router>
@@ -20,8 +20,8 @@ const AppRouter = () => (
     <Route path="/signUp" component={SignUp} />
     <Route path="/signIn" component={SignIn} />
     <Route path="/acheter/:terms" component={Buy} />
-    <Route path="/upload" exact component={UploadImage} />
-    <Route path="/newGoods" exact component={NewGood} />
+    <Route path="/upload" component={UploadImage} />
+    <Route path="/newGood" component={NewGood} />
   </Router>
 );
 

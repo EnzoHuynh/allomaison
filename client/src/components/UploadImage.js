@@ -8,19 +8,19 @@ const UploadImage = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+    setIDGood(1);
     //console.log('form data ', formData);
 
     imageApi
       .upload({ path, id_good })
       .then(result => {
         console.log('>> (onSubmit) file upload result = ', result);
-        console.log('jwt = ' + localStorage.getItem('jwt'));
         // access results...
       })
       .catch(function(error) {
         console.log('>> ERROR FILE UPLAOD ', error);
         alert(
-          'File upload failed. Please ensure you are uploading a .zip file only'
+          'File upload failed. Please ensure you are uploading a .jpeg or .png file only'
         );
       });
   };
