@@ -38,8 +38,8 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "email": "enzo@gmail.com",
-  "password": "enzo"
+  "email": "test@gmail.com",
+  "password": "test"
 }
 
 ###

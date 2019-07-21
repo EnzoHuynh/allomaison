@@ -8,7 +8,7 @@ let options = {
 if (localStorage.getItem('jwt')) {
   options = {
     ...options,
-    headers: { Authorization: localStorage.getItem('jwt') },
+    headers: { Authorization: `Bearer ${localStorage.getItem('jwt')}` },
   };
 }
 
