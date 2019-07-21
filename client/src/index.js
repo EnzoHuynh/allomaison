@@ -14,8 +14,6 @@ import Goods from './pages/goods';
 import Buy from './pages/buy';
 import UploadImage from './components/UploadImage';
 
-import UploadImage from './components/UploadImage';
-
 const AppRouter = () => (
   <Router>
     <Nav />
