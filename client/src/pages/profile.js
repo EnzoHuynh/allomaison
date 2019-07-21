@@ -21,7 +21,6 @@ const Profile = () => {
                   }
                 />
               </figure>
-              <button onClick={onUser}>Valider</button>
             </div>
           </div>
         </div>

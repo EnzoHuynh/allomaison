@@ -1,20 +1,45 @@
 GET http://localhost:3000/users
+<<<<<<< Updated upstream
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
+=======
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
+>>>>>>> Stashed changes
 
 ###
 POST http://localhost:3000/register
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
+<<<<<<< Updated upstream
+=======
+
+{
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@gmail.com",
+  "password": "test",
+  "dob": "2018-05-12"
+}
+
+###
+PUT http://localhost:3000/users/edit/5d3190c4a0ed2b001ed9335b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+>>>>>>> Stashed changes
 
 {
   "firstName": "Enzo",
   "lastName": "Huynh",
   "email": "enzo@gmail.com",
+<<<<<<< Updated upstream
   "password": "123456",
+=======
+  "password": "enzo",
+>>>>>>> Stashed changes
   "dob": "2018-05-12"
 }
 
 ###
+<<<<<<< Updated upstream
 PUT http://localhost:3000/users/edit/5d3190c4a0ed2b001ed9335b
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
@@ -28,6 +53,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 }
 
 ###
+=======
+>>>>>>> Stashed changes
 DELETE http://localhost:3000/users/delete/5d318b859bc632002039b1ab
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
@@ -38,6 +65,7 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
+<<<<<<< Updated upstream
   "email": "test@gmail.com",
   "password": "test"
 }
@@ -64,11 +92,21 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
   "square_meters": null,
   "status": null,
   "type": null
+=======
+  "email": "enzo@gmail.com",
+  "password": "enzo"
+>>>>>>> Stashed changes
 }
 
 ###
+GET http://localhost:3000/goods
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+###
+
 POST http://localhost:3000/goods
 Content-Type: application/json
+<<<<<<< Updated upstream
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
 
 ###
@@ -89,6 +127,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0Z
   "square_meters":85,
   "status":1,
   "type":"louer",
+  "id_user":"1"
+}
+
+###
+PUT http://localhost:3000/goods/edit/5d318d959bc632002039b1ae
+Content-Type: application/json
+=======
+>>>>>>> Stashed changes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+
+{
+  "address": "4 bis rue Leon Blum",
+  "zipcode": "91300",
+  "city": "paris",
+  "price": "200000",
+  "description": "Superbe appartement lumineux dans le nouveau quartier de Massy",
+  "title": "Appartement 4 pièce à Massy",
+  "room":4,
+  "bedroom": 3,
+  "square_meters":85,
+  "status":1,
+  "type":"Buy",
   "id_user":"1"
 }
 
