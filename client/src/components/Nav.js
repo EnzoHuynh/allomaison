@@ -34,6 +34,9 @@ const Nav = () => (
             </>
           ) : (
             <>
+              <Link to="/profile" className="button is-primary">
+                Profile
+              </Link>
               <Link
                 to="/logout"
                 className="button is-danger"

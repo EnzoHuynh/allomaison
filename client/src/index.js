@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import Home from './pages/home';
 import signUp from './pages/signUp';
 import signIn from './pages/signIn';
+import Profile from './pages/profile';
 
 const AppRouter = () => (
   <Router>
@@ -16,6 +17,7 @@ const AppRouter = () => (
     <Route path="/" exact component={Home} />
     <Route path="/signUp" exact component={signUp} />
     <Route path="/signIn" exact component={signIn} />
+    <Route path="/profile" exact component={Profile} />
   </Router>
 );
 
