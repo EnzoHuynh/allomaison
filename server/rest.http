@@ -1,10 +1,10 @@
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MTk1NzAsImV4cCI6MTU2MzcyMzE3MH0.XvMjKmkO2vWOC_Fw8ZxEEZF15vvxMz-4TxfTGVf6MBM
 
 ###
 POST http://localhost:3000/register
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
 
 {
   "firstName": "Enzo",
@@ -38,8 +38,8 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "email": "test@gmail.com",
-  "password": "test"
+  "email": "amandine-ripoll@outlook.fr",
+  "password": "amandine"
 }
 
 ###
@@ -67,9 +67,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 }
 
 ###
-POST http://localhost:3000/goods
+GET http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MTk1NzAsImV4cCI6MTU2MzcyMzE3MH0.XvMjKmkO2vWOC_Fw8ZxEEZF15vvxMz-4TxfTGVf6MBM
 
 ###
 
