@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
-
 import goodApi from '../../utils/goodApi';
 
 const NewGood = () => {
@@ -13,19 +12,15 @@ const NewGood = () => {
   const [room, setRoom] = useState('');
   const [bedroom, setBedroom] = useState('');
   const [square_meters, setSquareMeters] = useState('');
-  const [status, setStatus] = useState('');
-  const [id_user, setIDUser] = useState('');
-  const [type, setType] = useState('');
-  //const [id_user, setIDUser] = useState('');
+  const [status, setStatus] = useState(1);
+  const user = JSON.parse(window.localStorage.getItem('user'));
+  const [id_user, setIDUser] = useState(user.id);
+  const [type, setType] = useState('vendre');
+
+
 
   const onSubmit = e => {
     e.preventDefault();
-    //setIDUser('1');
-    //setStatus(parseInt(1), 10);
-
-    const user = JSON.parse(window.localStorage.getItem('user'));
-    setIDUser(user.id);
-    setStatus(1);
     goodApi.post({
       title,
       address,
@@ -191,9 +186,14 @@ const NewGood = () => {
               <div className="field">
                 <label className="label">Type</label>
                 <div class="select is-primary">
-                  <select onChange={e => setType(e.target.value)}>
-                    <option value="vendre">vendre</option>
-                    <option value="louer">louer</option>
+                  <select
+                    id="type"
+                    defaultValue="vendre"
+                    onChange={e => setType(e.target.value)}
+                    value={type}
+                  >
+                    <option value="vendre">Vendre</option>
+                    <option value="louer">Louer</option>
                   </select>
                 </div>
               </div>
