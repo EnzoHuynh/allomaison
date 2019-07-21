@@ -2,33 +2,32 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 
 import goodApi from '../../utils/goodApi';
-import { stat } from 'fs';
 
 const NewGood = () => {
   const [title, setTitle] = useState('');
   const [address, setAddress] = useState('');
-  const [zipCode, setZipcode] = useState('');
+  const [zipcode, setZipcode] = useState('');
   const [city, setCity] = useState('');
   const [description, setDescription] = useState('');
-  const [price, setPrice] = useState();
-  const [room, setRoom] = useState();
-  const [bedroom, setBedroom] = useState();
-  const [square_meters, setSquareMeters] = useState();
-  const [status, setStatus] = useState();
+  const [price, setPrice] = useState('');
+  const [room, setRoom] = useState('');
+  const [bedroom, setBedroom] = useState('');
+  const [square_meters, setSquareMeters] = useState('');
+
   const [type, setType] = useState('');
-  const [id_user, setIDUser] = useState('');
+  //const [id_user, setIDUser] = useState('');
 
   const onSubmit = e => {
     e.preventDefault();
-    const user = JSON.parse(window.localStorage.getItem('user'));
-    console.log(user);
-    //setIDUser(user.id);
-    setStatus(1);
+    //setIDUser('1');
+    //setStatus(parseInt(1), 10);
 
+    //const user = JSON.parse(window.localStorage.getItem('user'));
+    //console.log(user);
     goodApi.post({
       title,
       address,
-      zipCode,
+      zipcode,
       city,
       description,
       price,
@@ -81,7 +80,7 @@ const NewGood = () => {
                   <input
                     className="input"
                     type="number"
-                    onChange={e => setZipcode(e.target.value)}
+                    onChange={e => setZipcode(parseInt(e.target.value), 10)}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-envelope"></i>
@@ -126,7 +125,7 @@ const NewGood = () => {
                   <input
                     className="input"
                     type="number"
-                    onChange={e => setPrice(e.target.value)}
+                    onChange={e => setPrice(parseInt(e.target.value), 10)}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-lock"></i>
@@ -140,7 +139,7 @@ const NewGood = () => {
                   <input
                     className="input"
                     type="number"
-                    onChange={e => setRoom(e.target.value)}
+                    onChange={e => setRoom(parseInt(e.target.value), 10)}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-envelope"></i>
@@ -157,7 +156,7 @@ const NewGood = () => {
                   <input
                     className="input"
                     type="number"
-                    onChange={e => setBedroom(e.target.value)}
+                    onChange={e => setBedroom(parseInt(e.target.value), 10)}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-envelope"></i>
@@ -174,7 +173,9 @@ const NewGood = () => {
                   <input
                     className="input"
                     type="number"
-                    onChange={e => setSquareMeters(e.target.value)}
+                    onChange={e =>
+                      setSquareMeters(parseInt(e.target.value), 10)
+                    }
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-envelope"></i>
