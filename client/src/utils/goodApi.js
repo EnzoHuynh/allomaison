@@ -10,9 +10,9 @@ const post = async (body = {}) => {
   }
 };
 
-const getGoods = async (body = {}) => {
+const getGoods = async id => {
   try {
-    const data = await axios.get(`goods`, body);
+    const data = await axios.get(`goods/user/${id}`);
     console.log('👉 Returned data:', data);
     return data;
   } catch (e) {
