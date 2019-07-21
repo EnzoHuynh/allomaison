@@ -19,12 +19,14 @@ router.get('/city/:city/type/:type', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  console.log(req.body);
   const good = new Good(req.body);
   good.save()
     .then(data => res.status(201).json(data))
     .catch(error => {
       if (error.name === 'ValidationError') {
         res.status(400).json(error.errors);
+        console.log(error);
       } else {
         res.sendStatus(500);
       }
