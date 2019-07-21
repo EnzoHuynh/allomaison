@@ -7,10 +7,10 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
 
 {
-  "firstName": "test",
-  "lastName": "test",
-  "email": "test@gmail.com",
-  "password": "test",
+  "firstName": "Enzo",
+  "lastName": "Huynh",
+  "email": "enzo@gmail.com",
+  "password": "123456",
   "dob": "2018-05-12"
 }
 
