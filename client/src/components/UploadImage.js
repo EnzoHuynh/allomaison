@@ -8,6 +8,7 @@ const UploadImage = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+    setIDGood(1);
     //console.log('form data ', formData);
 
     imageApi
@@ -19,7 +20,7 @@ const UploadImage = () => {
       .catch(function(error) {
         console.log('>> ERROR FILE UPLAOD ', error);
         alert(
-          'File upload failed. Please ensure you are uploading a .zip file only'
+          'File upload failed. Please ensure you are uploading a .jpeg or .png file only'
         );
       });
   };
