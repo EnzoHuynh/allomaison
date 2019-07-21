@@ -13,8 +13,6 @@ import Profile from './pages/profile';
 import Buy from './pages/buy';
 import UploadImage from './components/UploadImage';
 
-import UploadImage from './components/UploadImage';
-
 const AppRouter = () => (
   <Router>
     <Nav />
