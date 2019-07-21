@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Select from 'react-select';
+
 import goodApi from '../../utils/goodApi';
 
 const NewGood = () => {
