@@ -12,9 +12,10 @@ const UploadImage = () => {
     //console.log('form data ', formData);
 
     imageApi
-      .upload({ path, id_good })
+      .upload(path)
       .then(result => {
         console.log('>> (onSubmit) file upload result = ', result);
+        console.log(path);
         // access results...
       })
       .catch(function(error) {
