@@ -110,11 +110,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 }
 
 ###
-POST http://localhost:3000/images
+GET http://localhost:3000/images
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1Mzc1NSwiZXhwIjoxNTYzMzU3MzU1fQ.bzFu6CuDOL6WdGi8B9OyFVAkNEekZratMxN8Zyo2PTQ
-
-{
-  "path": "ddfsdfrhdfdgd.png",
-  "id_good": "1"
-}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MzYzODksImV4cCI6MTU2MzczOTk4OX0.XlP2VQe7kg21YGOgMk-I7EYBCdkR4YZhMZ72uqRqVU0
