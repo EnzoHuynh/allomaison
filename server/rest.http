@@ -44,7 +44,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/goods
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2Mzc0NDQyMSwiZXhwIjoxNTYzNzQ4MDIxfQ.36VAtCK_WYjfRNSHBKsACztgSijrkHiiu1n6Hd6FASQ
 
 ###
 GET http://localhost:3000/goods/user/5d3484937b53c9002e862d96

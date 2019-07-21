@@ -30,13 +30,10 @@ const Goods = ({ match }) => {
   }, [terms]);
 
   return (
-    <ul className="columns">
+    <ul className="container">
       {cities &&
         cities.map(city => (
-          <li
-            key={city._id}
-            className="card column is-half is-offset-one-quarter"
-          >
+          <li key={city._id} className="card">
             <div className="card-image">
               <figure className="image is-square">
                 <img
