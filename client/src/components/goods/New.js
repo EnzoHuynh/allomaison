@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 
-import goodApi from '../utils/authApi';
+import goodApi from '../../utils/goodApi';
+import { stat } from 'fs';
 
 const NewGood = () => {
   const [title, setTitle] = useState('');
@@ -9,40 +10,35 @@ const NewGood = () => {
   const [zipCode, setZipcode] = useState('');
   const [city, setCity] = useState('');
   const [description, setDescription] = useState('');
-  const [price, setPrice] = useState('');
-  const [room, setRoom] = useState('');
-  const [bedroom, setBedromm] = useState('');
-  const [square_meters, setSquareMeters] = useState('');
-  const [status, setStatus] = useState('');
+  const [price, setPrice] = useState();
+  const [room, setRoom] = useState();
+  const [bedroom, setBedroom] = useState();
+  const [square_meters, setSquareMeters] = useState();
+  const [status, setStatus] = useState();
   const [type, setType] = useState('');
   const [id_user, setIDUser] = useState('');
 
-  const statusGoods = [
-    { label: 'Vendre', value: 0 },
-    { label: 'Louer', value: 1 },
-  ];
-
-  const nombers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
   const onSubmit = e => {
-    setIDUser(1);
     e.preventDefault();
-    goodApi
-      .post({
-        title,
-        address,
-        zipCode,
-        city,
-        description,
-        price,
-        room,
-        bedroom,
-        square_meters,
-        status,
-        type,
-        id_user,
-      })
-      .then(() => (window.location.href = '/signIn'));
+    const user = JSON.parse(window.localStorage.getItem('user'));
+    console.log(user);
+    //setIDUser(user.id);
+    setStatus(1);
+
+    goodApi.post({
+      title,
+      address,
+      zipCode,
+      city,
+      description,
+      price,
+      room,
+      bedroom,
+      square_meters,
+      status,
+      type,
+      id_user,
+    });
   };
 
   return (
@@ -84,7 +80,7 @@ const NewGood = () => {
                 <p className="control has-icons-left has-icons-right">
                   <input
                     className="input"
-                    type="text"
+                    type="number"
                     onChange={e => setZipcode(e.target.value)}
                   />
                   <span className="icon is-small is-left">
@@ -129,7 +125,7 @@ const NewGood = () => {
                 <p className="control has-icons-left">
                   <input
                     className="input"
-                    type="text"
+                    type="number"
                     onChange={e => setPrice(e.target.value)}
                   />
                   <span className="icon is-small is-left">
@@ -140,52 +136,63 @@ const NewGood = () => {
 
               <div className="field">
                 <label className="label">Pieces</label>
+                <p className="control has-icons-left has-icons-right">
+                  <input
+                    className="input"
+                    type="number"
+                    onChange={e => setRoom(e.target.value)}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope"></i>
+                  </span>
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div className="field">
+                <label className="label">Chambres</label>
+                <p className="control has-icons-left has-icons-right">
+                  <input
+                    className="input"
+                    type="number"
+                    onChange={e => setBedroom(e.target.value)}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope"></i>
+                  </span>
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div className="field">
+                <label className="label">Mètre carré</label>
+                <p className="control has-icons-left has-icons-right">
+                  <input
+                    className="input"
+                    type="number"
+                    onChange={e => setSquareMeters(e.target.value)}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope"></i>
+                  </span>
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div className="field">
+                <label className="label">Type</label>
                 <div class="select is-primary">
-                  <select>
-                    <option>1</option>
-                    <option>2</option>
+                  <select onChange={e => setType(e.target.value)}>
+                    <option>Vendre</option>
+                    <option>Louer</option>
                   </select>
                 </div>
-              </div>
-
-              <div className="field">
-                <p className="control has-icons-left">
-                  <Select
-                    onChange={e => setStatus(e.target.value)}
-                    options={statusGoods}
-                  />
-                  <span className="icon is-small is-left">
-                    <i className="fas fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-
-              <div className="field">
-                <label className="label">Ville</label>
-                <p className="control has-icons-left">
-                  <input
-                    className="input"
-                    type="text"
-                    onChange={e => setCity(e.target.value)}
-                  />
-                  <span className="icon is-small is-left">
-                    <i className="fas fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-
-              <div className="field">
-                <label className="label">Ville</label>
-                <p className="control has-icons-left">
-                  <input
-                    className="input"
-                    type="text"
-                    onChange={e => setCity(e.target.value)}
-                  />
-                  <span className="icon is-small is-left">
-                    <i className="fas fa-lock"></i>
-                  </span>
-                </p>
               </div>
 
               <div className="field">
