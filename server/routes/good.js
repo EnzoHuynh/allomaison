@@ -10,8 +10,12 @@ router.get('/:id', (req, res) => {
   Good.findById(req.params.id).then(data => res.json(data));
 })
 
-router.get('/city/:city', (req, res) => {
-  Good.find({ city: req.params.city }).then(data => res.json(data));
+router.get('/user/:id', (req, res) => {
+  Good.find({ user: req.params.user }).then(data => res.json(data));
+})
+
+router.get('/city/:city/type/:type', (req, res) => {
+  Good.find({ city: req.params.city, type: req.params.type }).then(data => res.json(data));
 })
 
 router.post('/', (req, res) => {

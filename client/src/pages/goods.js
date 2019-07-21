@@ -1,15 +1,31 @@
 import React, { useEffect, useState } from 'react';
 
 import goodApi from '../utils/goodApi';
+import geoApi from '../utils/geoApi';
 
-const Buy = ({ match }) => {
-  const { terms } = match.params;
+const Goods = ({ match }) => {
+  const [terms, setTerms] = useState(match.params.terms);
   const [cities, setCities] = useState(null);
 
-  const fetchCities = () =>
-    goodApi.getByCity(terms).then(({ data }) => setCities(data));
+  const fetchCities = () => {
+    const { path } = match;
+    const acheter = new RegExp('/(acheter)/');
+
+    goodApi
+      .getByCityAndType(terms, acheter.test(path) ? 'acheter' : 'louer')
+      .then(({ data }) => setCities(data));
+  };
 
   useEffect(() => {
+    if (!cities && !terms) {
+      navigator.geolocation.getCurrentPosition(position => {
+        const { latitude, longitude } = position.coords;
+
+        geoApi
+          .latLon(latitude, longitude)
+          .then(({ data }) => setTerms(data[0].nom));
+      });
+    }
     fetchCities();
   }, [terms]);
 
@@ -39,4 +55,4 @@ const Buy = ({ match }) => {
   );
 };
 
-export default Buy;
+export default Goods;
