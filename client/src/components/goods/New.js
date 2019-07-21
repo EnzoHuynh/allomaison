@@ -13,7 +13,8 @@ const NewGood = () => {
   const [room, setRoom] = useState('');
   const [bedroom, setBedroom] = useState('');
   const [square_meters, setSquareMeters] = useState('');
-
+  const [status, setStatus] = useState('');
+  const [id_user, setIDUser] = useState('');
   const [type, setType] = useState('');
   //const [id_user, setIDUser] = useState('');
 
@@ -22,8 +23,9 @@ const NewGood = () => {
     //setIDUser('1');
     //setStatus(parseInt(1), 10);
 
-    //const user = JSON.parse(window.localStorage.getItem('user'));
-    //console.log(user);
+    const user = JSON.parse(window.localStorage.getItem('user'));
+    setIDUser(user.id);
+    setStatus(1);
     goodApi.post({
       title,
       address,
@@ -190,8 +192,8 @@ const NewGood = () => {
                 <label className="label">Type</label>
                 <div class="select is-primary">
                   <select onChange={e => setType(e.target.value)}>
-                    <option>Vendre</option>
-                    <option>Louer</option>
+                    <option value="vendre">vendre</option>
+                    <option value="louer">louer</option>
                   </select>
                 </div>
               </div>

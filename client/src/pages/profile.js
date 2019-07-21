@@ -20,23 +20,8 @@ const Profile = () => {
       <div className="container">
         <div className="columns">
           <div className="column is-6 is-offset-3">
-<<<<<<< HEAD
-            <div className="box">
-              <figure className="image is-128x128" style={{ margin: '0 auto' }}>
-                <img
-                  className="is-rounded"
-                  src={
-                    user && 'path_img' in user
-                      ? user.path_img
-                      : 'https://randomuser.me/api/portraits/women/79.jpg'
-                  }
-                />
-              </figure>
-            </div>
-=======
             <h1 className="title is-5 has-text-centered">Profil</h1>
             <label>Email : {user.email}</label>
->>>>>>> 1d3aa163c49d6dee72f9d665344a41b4ecd4be46
           </div>
           {goods &&
             goods.map(goods => (
