@@ -38,6 +38,7 @@ const upload = multer({
 
 router.post('/upload',function(req,res){
   upload(req,res, (err) => {
+    console.log("kiki" + req);
     const image = new Image({path: req.file[0].name, id_good:1});
     image.save()
     .then(data => res.status(201).json(data))
@@ -49,6 +50,8 @@ router.post('/upload',function(req,res){
         console.log(error);
       }
     });
+      //console.log(req.body);
+      //console.log(req.files);
       if(err) {
           return res.end("Error uploading file.");
       }
