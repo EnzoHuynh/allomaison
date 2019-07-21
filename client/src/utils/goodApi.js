@@ -10,6 +10,16 @@ const post = async (body = {}) => {
   }
 };
 
+const getGoods = async (body = {}) => {
+  try {
+    const data = await axios.get(`goods`, body);
+    console.log('👉 Returned data:', data);
+    return data;
+  } catch (e) {
+    console.log(`😱 Axios request failed: ${e}`);
+  }
+};
+
 const getByCity = async city => {
   try {
     const data = await axios.get(`goods/city/${city}`);
@@ -23,6 +33,7 @@ const getByCity = async city => {
 const goodApi = {
   post,
   getByCity,
+  getGoods,
 };
 
 export default goodApi;

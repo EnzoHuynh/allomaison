@@ -1,15 +1,15 @@
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
 ###
 POST http://localhost:3000/register
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNTQ1MjE3LCJleHAiOjE1NjM1NDg4MTd9.2UvY67xaI573masmllJzMCE3mfrXwFvdHstJ82ZTaRg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
 {
-  "firstName": "Enzo",
-  "lastName": "Huynh",
-  "email": "enzo@gmail.com",
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@gmail.com",
   "password": "123456",
   "dob": "2018-05-12"
 }
@@ -17,7 +17,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFb
 ###
 PUT http://localhost:3000/users/edit/5d3190c4a0ed2b001ed9335b
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
 {
   "firstName": "Enzo",
@@ -38,9 +38,18 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "email": "test@gmail.com",
-  "password": "test"
+  "email": "enzo@gmail.com",
+  "password": "123456"
 }
+
+###
+
+GET http://localhost:3000/goods
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
+
+###
+GET http://localhost:3000/goods/user/5d3484937b53c9002e862d96
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
 ###
 GET http://localhost:3000/goods/city/Massy
@@ -69,13 +78,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 ###
 POST http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
-
-###
-
-POST http://localhost:3000/goods
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzUyODE3MywiZXhwIjoxNTYzNTMxNzczfQ.oFEbCtgyrmImlXruCaos0dpoEOySamgd6a5YWEJm7yE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
 {
   "address": "4 bis rue Leon Blum",

@@ -1,28 +1,34 @@
 import React, { useState } from 'react';
 
-import authApi from '../utils/authApi';
+import goodApi from '../utils/goodApi';
 
 const Profile = () => {
-  const [user, setUser] = useState('');
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  const getGoods = () => {
+    // const [title, setTitle] = useState('');
+    // const [adress, setAdress] = useState('');
+    // const [zipcode, setZipcode] = useState('');
+    // const [city, setCity] = useState('');
+    // const [description, setDescription] = useState('');
+    // const [price, setPrice] = useState('');
+    // const [room, setRoom] = useState('');
+    // const [bedroom, setBedroom] = useState('');
+    // const [square_meters, setSquare_meters] = useState('');
+    // const [status, setStatus] = useState('');
+    // const [type, setType] = useState('');
+
+    const goods = goodApi.getGoods().then(({ data }) => getItem(data));
+    console.log(goods);
+  };
 
   return (
     <section className="section">
       <div className="container">
         <div className="columns">
           <div className="column is-6 is-offset-3">
-            <div className="box">
-              <figure className="image is-128x128" style={{ margin: '0 auto' }}>
-                <img
-                  className="is-rounded"
-                  src={
-                    user && 'path_img' in user
-                      ? user.path_img
-                      : 'https://randomuser.me/api/portraits/women/79.jpg'
-                  }
-                />
-              </figure>
-              <button onClick={onUser}>Valider</button>
-            </div>
+            <h1 className="title is-5 has-text-centered">Profil</h1>
+            <label>Email : {user.email}</label>
           </div>
         </div>
       </div>
