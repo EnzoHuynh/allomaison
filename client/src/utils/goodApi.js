@@ -20,9 +20,9 @@ const getGoods = async id => {
   }
 };
 
-const getByCity = async city => {
+const getByCityAndType = async (city, type) => {
   try {
-    const data = await axios.get(`goods/city/${city}`);
+    const data = await axios.get(`goods/city/${city}/type/${type}`);
     console.log('👉 Returned data:', data);
     return data;
   } catch (e) {
@@ -32,8 +32,8 @@ const getByCity = async city => {
 
 const goodApi = {
   post,
-  getByCity,
   getGoods,
+  getByCityAndType,
 };
 
 export default goodApi;

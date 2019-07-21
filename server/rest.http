@@ -1,3 +1,4 @@
+###
 GET http://localhost:3000/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
@@ -43,18 +44,12 @@ Content-Type: application/json
 }
 
 ###
-
 GET http://localhost:3000/goods
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
 
 ###
 GET http://localhost:3000/goods/user/5d3484937b53c9002e862d96
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
-
-###
-GET http://localhost:3000/goods/city/Massy
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
 
 ###
 PUT http://localhost:3000/goods/edit/5d2ef9ed4ae6a70168b20522
@@ -78,7 +73,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 ###
 POST http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5NDQsImV4cCI6MTU2MzcyNjU0NH0.yalUBASmsNkEcb4z6DfrwzTrTNDXwTj-hizhl0IF3Xo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0ZXN0IiwiaWF0IjoxNTYzNzIxNTMyLCJleHAiOjE1NjM3MjUxMzJ9.j7pysqDkXh_EKoMmS1hr80G-WyBlC35U86YsF3n8Py8
 
 {
   "address": "4 bis rue Leon Blum",
@@ -86,12 +81,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjM3MjI5N
   "city": "Massy",
   "price": "200000",
   "description": "Superbe appartement lumineux dans le nouveau quartier de Massy",
-  "title": "Appartement 4 pièce à Massy",
-  "room":4,
+  "title": "Appartement 5 pièce à Massy",
+  "room":5,
   "bedroom": 3,
   "square_meters":85,
   "status":1,
-  "type":"Buy",
+  "type":"louer",
   "id_user":"1"
 }
 
