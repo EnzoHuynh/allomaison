@@ -47,8 +47,16 @@ router.post('/login_check', (req, res) => {
         lastName: user.lastName,
         email: user.email
       });
+      const trimmedUser = {
+        id: user._id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        dob: user.dob,
+      }
       res.status(201).send({
-        token
+        token,
+        user: trimmedUser
       });
     })
     .catch(error => {

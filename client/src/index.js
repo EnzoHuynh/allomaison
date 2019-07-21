@@ -10,6 +10,8 @@ import Home from './pages/home';
 import signUp from './pages/signUp';
 import signIn from './pages/signIn';
 import Profile from './pages/profile';
+import Buy from './pages/buy';
+
 
 const AppRouter = () => (
   <Router>
@@ -18,6 +20,7 @@ const AppRouter = () => (
     <Route path="/signUp" exact component={signUp} />
     <Route path="/signIn" exact component={signIn} />
     <Route path="/profile" exact component={Profile} />
+    <Route path="/acheter/:terms" component={Buy} />
   </Router>
 );
 

@@ -42,6 +42,7 @@ const Nav = () => (
                 className="button is-danger"
                 onClick={() => {
                   localStorage.removeItem('jwt');
+                  localStorage.removeItem('user');
                   window.location.href = '/';
                 }}
               >

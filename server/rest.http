@@ -1,5 +1,5 @@
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFbnpvIiwiaWF0IjoxNTYzNjMwMTk2LCJleHAiOjE1NjM2MzM3OTZ9.uSxX_puNajEg0k-Jj6xvibb_BBXfqVxt3xcfSJays44
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
 
 ###
 POST http://localhost:3000/register
@@ -38,14 +38,14 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "email": "enzo@gmail.com",
-  "password": "123456"
+  "email": "test@gmail.com",
+  "password": "test"
 }
 
 ###
-GET http://localhost:3000/goods
+GET http://localhost:3000/goods/city/Massy
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODY0NCwiZXhwIjoxNTYzMzYyMjQ0fQ.64hl9zkpQwnYT9rKwlzxiMHU9D3JpDMXRHLArNwm0T0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
 
 ###
 PUT http://localhost:3000/goods/edit/5d2ef9ed4ae6a70168b20522
@@ -69,7 +69,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 ###
 POST http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzM1ODU5MSwiZXhwIjoxNTYzMzYyMTkxfQ.cury3g1tzFzVLikIjCgLa2sqC8UNDqurwbLcgC92jeM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBbWFuZGluZSIsImlhdCI6MTU2MzU1MjgwOSwiZXhwIjoxNTYzNTU2NDA5fQ.0IFHYcP8SpeQtUY_TNm-ONf19mbmDtP817X2tzydqX8
 
 ###
 
@@ -80,7 +80,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 {
   "address": "4 bis rue Leon Blum",
   "zipcode": "91300",
-  "city": "massy",
+  "city": "Massy",
   "price": "200000",
   "description": "Superbe appartement lumineux dans le nouveau quartier de Massy",
   "title": "Appartement 4 pièce à Massy",

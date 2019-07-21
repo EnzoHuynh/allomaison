@@ -10,6 +10,7 @@ const SignIn = () => {
     e.preventDefault();
     authApi.login({ email, password }).then(({ data }) => {
       localStorage.setItem('jwt', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
       window.location.href = '/';
     });
   };
