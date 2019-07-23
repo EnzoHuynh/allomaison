@@ -16,3 +16,5 @@ app.use('/goods', goodRouter);
 app.use('/images', imageRouter);
 
 app.listen(3000, () => console.log('Listening on port 3000'));
+
+module.exports = app;

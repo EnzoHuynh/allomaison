@@ -23,7 +23,9 @@ const SignIn = () => {
             <div className="column is-6 is-offset-3">
               <div className="field">
                 <p className="control has-icons-left has-icons-right">
+                  <label htmlFor="email">Email</label>
                   <input
+                    id="email"
                     className="input"
                     type="email"
                     placeholder="Email"
@@ -39,7 +41,9 @@ const SignIn = () => {
               </div>
               <div className="field">
                 <p className="control has-icons-left">
+                  <label htmlFor="password">Password</label>
                   <input
+                    id="password"
                     className="input"
                     type="password"
                     placeholder="Password"
