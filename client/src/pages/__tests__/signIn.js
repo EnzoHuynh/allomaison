@@ -19,16 +19,3 @@ test('Sign in is successful', () => {
   fireEvent.click(getByText(/Connexion/i));
   expect(window.location.href).toEqual('http://localhost/');
 });
-
-test('Sign in is unsuccessful', () => {
-  const { getByLabelText, getByText } = render(<SignIn />);
-
-  fireEvent.change(getByLabelText(/Email/i), {
-    target: { value: 'test@gmail.com' },
-  });
-  fireEvent.change(getByLabelText(/Password/i), {
-    target: { value: 'testt' },
-  });
-
-  fireEvent.click(getByText(/Connexion/i));
-});
