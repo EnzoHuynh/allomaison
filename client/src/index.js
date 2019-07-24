@@ -13,6 +13,7 @@ import UploadImage from './components/UploadImage';
 import NewGood from './pages/newGood';
 import Goods from './pages/goods';
 import Profile from './pages/profile';
+import Detail from './pages/detail';
 
 const AppRouter = () => (
   <Router>
@@ -25,6 +26,7 @@ const AppRouter = () => (
     <Route path="/signIn" component={SignIn} />
     <Route path="/acheter/:terms?" component={Goods} />
     <Route path="/louer/:terms?" component={Goods} />
+    <Route path="/detail/:id/:name" component={Detail} />
   </Router>
 );
 

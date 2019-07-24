@@ -44,7 +44,11 @@ const Search = ({ history }) => {
         autoHighlight
       />
       <button onClick={onClick}>Rechercher</button>
-      <div>{items.map(item => <p key={item.code}>{item.nom}</p>)}</div>
+      <div>
+        {items.map(item => (
+          <p key={item.code}>{item.nom}</p>
+        ))}
+      </div>
     </form>
   );
 };
