@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-// import goodApi from '../utils/goodApi';
+import goodApi from '../utils/goodApi';
 
 const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user'));
-  // const { goods, setGoods } = useState(null);
+  const [goods, setGoods] = useState(null);
 
-  // const fetchGoods = () => {
-  //   goodApi.getGoods(user.id).then(setGoods(goods));
-  // };
+  const fetchGoods = () => {
+    goodApi.getGoods(user.id).then(goods => setGoods(goods));
+  };
 
-  // console.log(fetchGoods);
-  // useEffect(() => {
-  //   fetchGoods();
-  // }, [user.id]);
+  console.log(goods);
+  useEffect(() => {
+    fetchGoods();
+  }, []);
 
   return (
     <section className="section">
@@ -23,20 +23,20 @@ const Profile = () => {
             <h1 className="title is-5 has-text-centered">Profil</h1>
             <label>Email : {user.email}</label>
           </div>
-          {/* {goods &&
-            goods.map(goods => (
+          {goods &&
+            goods.map(good => (
               <>
-                <div>{goods.title}</div>
-                <div>{goods.address}</div>
-                <div>{goods.city}</div>
-                <div>{goods.zipcode}</div>
-                <div>{goods.description}</div>
-                <div>{goods.price}</div>
-                <div>{goods.room}</div>
-                <div>{goods.bedroom}</div>
-                <div>{goods.square_meters}</div>
+                <div>{good.title}</div>
+                <div>{good.address}</div>
+                <div>{good.city}</div>
+                <div>{good.zipcode}</div>
+                <div>{good.description}</div>
+                <div>{good.price}</div>
+                <div>{good.room}</div>
+                <div>{good.bedroom}</div>
+                <div>{good.square_meters}</div>
               </>
-            ))} */}
+            ))}
         </div>
       </div>
     </section>

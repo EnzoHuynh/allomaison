@@ -11,7 +11,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.get('/user/:id', (req, res) => {
-  Good.find({ user: req.params.user }).then(data => res.json(data));
+  Good.find({ id_user: req.params.id }).then(data => res.json(data));
 })
 
 router.get('/city/:city/type/:type', (req, res) => {
