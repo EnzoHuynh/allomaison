@@ -70,9 +70,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 }
 
 ###
-GET http://localhost:3000/goods
+POST http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0ZXN0IiwiaWF0IjoxNTYzNzIxNTMyLCJleHAiOjE1NjM3MjUxMzJ9.j7pysqDkXh_EKoMmS1hr80G-WyBlC35U86YsF3n8Py8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0ZXN0IiwiaWF0IjoxNTYzOTIwOTYwLCJleHAiOjE1NjM5MjQ1NjB9.OjgsuwHqSUtKdBDK7mkfqmn02w1k9nukKnOTiLjDEzQ
 
 {
   "address": "4 bis rue Leon Blum",

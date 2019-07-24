@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Autocomplete from 'react-autocomplete';
-import { withRouter } from 'react-router-dom';
 
 import geoApi from '../utils/geoApi';
 
@@ -26,7 +25,9 @@ const Search = ({ history }) => {
         <option value="acheter">Acheter</option>
         <option value="louer">Louer</option>
       </select>
+      <label htmlFor="search">Recherche</label>
       <Autocomplete
+        inputProps={{ id: 'search' }}
         getItemValue={item => item.nom}
         items={items}
         renderItem={(item, isHighlighted) => (
@@ -43,8 +44,9 @@ const Search = ({ history }) => {
         autoHighlight
       />
       <button onClick={onClick}>Rechercher</button>
+      <div>{items.map(item => <p key={item.code}>{item.nom}</p>)}</div>
     </form>
   );
 };
 
-export default withRouter(Search);
+export default Search;
