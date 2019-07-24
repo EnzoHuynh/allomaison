@@ -72,7 +72,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBb
 ###
 POST http://localhost:3000/goods
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0ZXN0IiwiaWF0IjoxNTYzOTIwOTYwLCJleHAiOjE1NjM5MjQ1NjB9.OjgsuwHqSUtKdBDK7mkfqmn02w1k9nukKnOTiLjDEzQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0ZXN0IiwiaWF0IjoxNTYzOTYyMzk4LCJleHAiOjE1NjM5NjU5OTh9.lpUUgq-QPPWf5wHN78vTGriZh4Nq2vpEZma_xQC_s8M
 
 {
   "address": "4 bis rue Leon Blum",
@@ -86,8 +86,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0Z
   "square_meters":85,
   "status":1,
   "type":"louer",
-  "id_user":"1"
+  "id_user":"5d3774182baff701ea22d9ae"
 }
+
+###
+GET http://localhost:3000/goods/user/5d3774182baff701ea22d9ae
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ0ZXN0IiwiaWF0IjoxNTYzOTYyMzk4LCJleHAiOjE1NjM5NjU5OTh9.lpUUgq-QPPWf5wHN78vTGriZh4Nq2vpEZma_xQC_s8M
 
 ###
 PUT http://localhost:3000/goods/edit/5d318d959bc632002039b1ae

@@ -7,10 +7,9 @@ const Profile = () => {
   const [goods, setGoods] = useState(null);
 
   const fetchGoods = () => {
-    goodApi.getGoods(user.id).then(goods => setGoods(goods));
+    goodApi.getGoods(user.id).then(({ data }) => setGoods(data));
   };
 
-  console.log(goods);
   useEffect(() => {
     fetchGoods();
   }, []);
@@ -24,6 +23,7 @@ const Profile = () => {
             <label>Email : {user.email}</label>
           </div>
           {goods &&
+            goods.length &&
             goods.map(good => (
               <>
                 <div>{good.title}</div>
