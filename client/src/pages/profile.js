@@ -17,24 +17,61 @@ const Profile = () => {
   return (
     <section className="section">
       <div className="container">
-        <div className="columns">
+        <div className="">
           <div className="column is-6 is-offset-3">
             <h1 className="title is-5 has-text-centered">Profil</h1>
             <label>Email : {user.email}</label>
           </div>
+          <h2 className="title is-5">
+            <strong>Mes biens :</strong>
+          </h2>
           {goods &&
-            goods.length &&
             goods.map(good => (
               <>
-                <div>{good.title}</div>
-                <div>{good.address}</div>
-                <div>{good.city}</div>
-                <div>{good.zipcode}</div>
-                <div>{good.description}</div>
-                <div>{good.price}</div>
-                <div>{good.room}</div>
-                <div>{good.bedroom}</div>
-                <div>{good.square_meters}</div>
+                <div className="box">
+                  <div className="columns">
+                    <div className="column is-6">
+                      <div>
+                        <strong>Titre : </strong>
+                        {good.title}
+                      </div>
+                      <div>
+                        <strong>Adresse : </strong>
+                        {good.address}
+                      </div>
+                      <div>
+                        <strong>Ville : </strong>
+                        {good.city}
+                      </div>
+                      <div>
+                        <strong>Code Postal : </strong>
+                        {good.zipcode}
+                      </div>
+                      <div>
+                        <strong>Description : </strong>
+                        {good.description}
+                      </div>
+                    </div>
+                    <div className="column is-6">
+                      <div>
+                        <strong>Prix : </strong>
+                        {good.price}€
+                      </div>
+                      <div>
+                        <strong>Pièce : </strong>
+                        {good.room}
+                      </div>
+                      <div>
+                        <strong>Chambre : </strong>
+                        {good.bedroom}
+                      </div>
+                      <div>
+                        <strong>Superficie : </strong>
+                        {good.square_meters}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </>
             ))}
         </div>
