@@ -2,8 +2,9 @@ const verifyToken = require('../lib/auth').verifyToken;
 
 const verify = (req, res, next) => {
   const goods = new RegExp('\/goods\/city\/\w*');
+  const good = new RegExp('\/goods\/\d*');
 
-  if (req.path === '/login_check' || req.path === '/register' || goods.test(req.path)) {
+  if (req.path === '/login_check' || req.path === '/register' || goods.test(req.path) || good.test(req.path)) {
     return next();
   }
 

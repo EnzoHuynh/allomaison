@@ -10,6 +10,16 @@ const post = async (body = {}) => {
   }
 };
 
+const getGood = async id => {
+  try {
+    const data = await axios.get(`goods/${id}`);
+    // console.log('👉 Returned data:', data);
+    return data;
+  } catch (e) {
+    console.log(`😱 Axios request failed: ${e}`);
+  }
+};
+
 const getGoods = async id => {
   try {
     const data = await axios.get(`goods/user/${id}`);
@@ -32,6 +42,7 @@ const getByCityAndType = async (city, type) => {
 
 const goodApi = {
   post,
+  getGood,
   getGoods,
   getByCityAndType,
 };
