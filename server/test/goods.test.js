@@ -40,7 +40,6 @@ describe('Good', function() {
 
     good.validate(function(err) {
       expect(err).to.equal(null);
-
       done();
     });
   });
